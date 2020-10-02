@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setupViews();
     }
+    private void setViews() {
 
     private void setupViews() {
 
