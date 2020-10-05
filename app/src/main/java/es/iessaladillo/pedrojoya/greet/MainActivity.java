@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (count > 10) {
             binding.lblOutputGreet.setText(R.string.buyPremium);
-        } else {
+        } else if (!name.isEmpty() && !surname.isEmpty() ){
             checkPremium();
             checkTreatment();
             checkStyle();
