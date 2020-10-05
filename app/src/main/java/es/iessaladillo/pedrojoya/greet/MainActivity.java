@@ -1,5 +1,6 @@
 package es.iessaladillo.pedrojoya.greet;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
@@ -24,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViews() {
 
-        binding.lblCountBar.setText(getString(R.string.countBarText, count));
+        binding.lblCountBar.setText(getString(R.string.countBarText, count++));
         binding.rdgTreatment.setOnCheckedChangeListener((radioGroup, i) -> checkTreatment());
-        binding.greetBtn.setOnClickListener(l -> printResult());
         binding.checkGreetStyle.setOnClickListener(l -> checkStyle());
         binding.lblpremiumSwitcher.setOnClickListener(l -> showBar());
+        binding.greetBtn.setOnClickListener(l -> printResult());
+
 
     }
 
